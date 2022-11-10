@@ -1,0 +1,279 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root {
+    color: #000000;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 1.333333;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.21541667;
+    text-align: center;
+    margin: 64px 0 32px;
+}
+
+.layout-container {
+    padding: 0 16px;
+}
+
+.form {
+    background: #f0eded;
+    margin: 0 auto 64px;
+    border-radius: 16px;
+    padding: 32px 63px;
+    max-width: 760px;
+}
+
+.field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+
+.field > label {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 4px 8px;
+}
+
+.field > label[for],
+label.checkbox,
+label.radio {
+    cursor: pointer;
+}
+
+.field.required > label::after {
+    content: " *";
+    color: #AF1414;
+}
+
+.field.error > .error-message {
+    color: #AF1414;
+    margin: 8px 4px 0;
+}
+
+.field + .field {
+    margin-top: 32px;
+}
+
+.field + .no-label {
+    margin-top: 8px;
+}
+
+.control {
+    color: #1F1F1F;
+    font-weight: 600;
+    line-height: inherit;
+    background-color: #ffffff;
+    outline: 0;
+    border: 3px solid #CACACA;
+    border-radius: 8px;
+    width: 100%;
+    padding: 13px;
+}
+
+input.control,
+select.control {
+    max-width: 450px;
+}
+
+select.control {
+   -webkit-appearance: none;
+      -moz-appearance: none;
+           appearance: none;
+   background-image: url(icons/Arrow\ Down.svg); 
+   background-position: right 13px top 50%;
+   background-repeat: no-repeat;
+   cursor: pointer;
+}
+
+textarea.control {
+    resize: vertical;
+}
+
+.icon-name,
+.icon-email,
+.icon-phone {
+    background-position: left 13px top 50%;
+    background-repeat: no-repeat;
+    padding-left: 45px;
+}
+
+.icon-name {
+    background-image: url(icons/User.svg);
+}
+
+.icon-email {
+    background-image: url(icons/Mention.svg);
+}
+
+.icon-phone {
+    background-image: url(icons/Call.svg);
+}
+
+.control:focus {
+    border-color: #466FAD;
+}
+
+.field > .radio,
+.field > .checkbox {
+    text-transform: none;
+    margin: 0;
+    position: relative;
+}
+
+.radio {
+    padding: 10px 16px;
+    padding-left: 36px;
+}
+
+.radio > input {
+    position: absolute;
+    top: 8px;
+    left: 4px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #CACACA;
+    transition: 0.2s all linear;
+    outline: none;
+}
+
+.checkbox {
+    padding: 12px 0;
+    padding-left: 33px;
+}
+
+.checkbox > input {
+    position: absolute;
+    top: 10px;
+    left: 0;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border: 3px solid #CACACA;
+    transition: 0.2s all linear;
+    outline: none;
+}
+
+input:checked {
+    border: 7px solid #466FAD;
+}
+
+.form-actions {
+    margin: 16px -16px -16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+}
+
+.form-actions > * {
+    margin: 16px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 300px;
+            flex: 1 0 300px;
+}
+
+.btn-reset,
+.btn-submit {
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    border-radius: 9000px;
+    padding: 16px 24px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.btn-reset {
+    background: #FFFFFF;
+}
+
+.btn-reset::before,
+.btn-submit::before {
+    content: "";
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-top: -3px;
+    margin-right: 8px;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-reset::before {
+    background-image: url(icons/Close.svg);
+}
+
+
+.btn-reset:hover,
+.btn-reset:focus {
+    background: #FFC3CA;
+}
+
+.btn-reset:active {
+    background: #EE7757;
+}
+
+.btn-submit {
+    background: #C1DAFF;
+}
+
+.btn-submit::before {
+    background-image: url(icons/Checked.svg);
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    background: #A0C5FC;
+}
+
+.btn-submit:active {
+    background: #3BC1FA;
+}

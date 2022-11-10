@@ -1,0 +1,84 @@
+<!--Корнійчук Ксенія — Практика №5 — Створення простої форми-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Майстер-клас №5</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="layout-container">
+            <h1>Форма зворотного зв’язку</h1>
+
+            <form class="form">
+
+                <div class="field required">
+                    <label for="field-name">Ваше ім’я</label>
+                    <input type="text" id="field-name" placeholder="Введіть ім’я в форматі Іван Франко" class="control icon-name" required>
+                </div>
+
+                <div class="field required">
+                    <label for="field-email">Ваш E-Mail</label>
+                    <input type="email" id="field-email" class="control icon-email" required>
+                </div>
+
+                <div class="field error required">
+                    <label for="field-phone-err">Ваш телефон</label>
+                    <input type="tel" id="field-phone-err" class="control icon-phone" required>
+                    <p class="error-message">
+                        Дане поле заповнене неправильно.<br>
+                        Тут на одну цифру більше ніж треба
+                    </p>
+                </div>
+
+                <div class="field">
+                    <label>Регіон</label>
+
+                    <label class="radio">
+                        <input type="radio" name="region" value="ukraine" checked>
+                        Україна
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="region" value="poland">
+                        Польща
+                    </label>
+                </div>
+
+                <div class="field">
+                    <label for="field-city">Ваше місто</label>
+                    <select id="field-city" class="control">
+                        <option value="" selected>Оберіть зі списку</option>
+                        <option value="kyiv">Київ</option>
+                        <option value="kharkiv">Харків</option>
+                        <option value="odesa">Одеса</option>
+                        <option value="donetsk">Донецьк</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="field-comment">Коментар</label>
+                    <textarea id="field-comment" rows="4" class="control"
+                    placeholder="Тут можна написати ваш відгук"></textarea>
+                </div>
+
+                <div class="field no-label">
+                    <label class="checkbox">
+                        <input type="checkbox" name="tos-agree" value="1">
+                        Погоджуюсь з умовами платформи
+                    </label>
+                </div>
+
+                <footer class="form-actions">
+                    <button type="reset" class="btn-reset">Скинути</button>
+                    <button type="submit" class="btn-submit">Готово</button>
+                </footer>
+
+            </form>
+        </div> 
+    </body>
+</html>
